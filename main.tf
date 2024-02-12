@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "we_rg" {
-  name     = "rgweeutest01"
+  name     = "rgweeutest84b1"
   location = "West Europe"
 }
 
