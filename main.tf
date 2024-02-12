@@ -1,7 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "we_rg" {
   name     = "rgwetests"
   location = "West Europe"
