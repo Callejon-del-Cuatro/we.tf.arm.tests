@@ -37,6 +37,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
   admin_username      = "quijote"
   admin_password      = "${var.admin_password}"
   disable_password_authentication = false
+
   network_interface_ids = [
     azurerm_network_interface.nic_we.id,
   ]
@@ -48,7 +49,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
+    offer     = "0001-com-ubuntu-server-jammy"
     sku       = "22_04-lts-gen2"
     version   = "latest"
   }
