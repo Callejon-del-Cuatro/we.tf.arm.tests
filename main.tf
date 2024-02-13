@@ -10,12 +10,12 @@ resource "azurerm_virtual_network" "net_we" {
   resource_group_name = azurerm_resource_group.rg_we.name
 }
 
-resource "azurerm_subnet" "snt_we" {
-  name                 = "sntweu84b1"
-  resource_group_name  = azurerm_resource_group.rg_we.name
-  virtual_network_name = azurerm_virtual_network.net_we.name
-  address_prefixes     = ["10.0.1.0/24"]
-}
+#resource "azurerm_subnet" "snt_we" {
+#  name                 = "sntweu84b1"
+#  resource_group_name  = azurerm_resource_group.rg_we.name
+#  virtual_network_name = azurerm_virtual_network.net_we.name
+#  address_prefixes     = ["10.0.1.0/24"]
+#}
 
 #resource "azurerm_network_interface" "example" {
 #  name                = "example-nic"
