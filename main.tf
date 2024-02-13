@@ -33,7 +33,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
   name                = "vmweu84b1-00"
   resource_group_name = azurerm_resource_group.rg_we.name
   location            = azurerm_resource_group.rg_we.location
-  size                = "Standard_B2pts_v2"
+  size                = "Standard_B2s_v2"
   admin_username      = "quijote"
   admin_password      = var.admin_password
   network_interface_ids = [
@@ -43,7 +43,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
-    sku       = "22.04-LTS"
+    sku       = "22_04-lts-gen2"
     version   = "latest"
   }
 }
