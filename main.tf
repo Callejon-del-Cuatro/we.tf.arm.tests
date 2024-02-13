@@ -35,7 +35,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
   location            = azurerm_resource_group.rg_we.location
   size                = "Standard_B2s_v2"
   admin_username      = "quijote"
-  admin_password      = var.admin_password
+  admin_password      = terraform.var.admin_password
   network_interface_ids = [
     azurerm_network_interface.nic_we.id,
   ]
