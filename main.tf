@@ -29,28 +29,3 @@ resource "azurerm_network_interface" "nic_we" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "vm_we" {
-  name                = "vmweu84b1-00"
-  resource_group_name = azurerm_resource_group.rg_we.name
-  location            = azurerm_resource_group.rg_we.location
-  size                = "Standard_B2ms"
-  admin_username      = "quijote"
-  admin_password      = "${var.admin_password}"
-  disable_password_authentication = false
-
-  network_interface_ids = [
-    azurerm_network_interface.nic_we.id,
-  ]
-
-  os_disk {
-    caching              = "ReadWrite"
-    storage_account_type = "Standard_LRS"
-  }
-
-  source_image_reference {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts-gen2"
-    version   = "latest"
-  }
-}
