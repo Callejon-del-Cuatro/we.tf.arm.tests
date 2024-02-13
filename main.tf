@@ -3,12 +3,12 @@ resource "azurerm_resource_group" "rg_we" {
   location = "West Europe"
 }
 
-#resource "azurerm_virtual_network" "net_we" {
-#  name                = "netweu84b1"
-#  address_space       = ["10.0.0.0/16"]
-#  location            = azurerm_resource_group.rg_we.location
-#  resource_group_name = azurerm_resource_group.rg_we.name
-#}
+resource "azurerm_virtual_network" "net_we" {
+  name                = "netweu84b1"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.rg_we.location
+  resource_group_name = azurerm_resource_group.rg_we.name
+}
 
 #resource "azurerm_subnet" "snt_we" {
 #  name                 = "sntweu84b1"
