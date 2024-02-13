@@ -17,10 +17,10 @@ resource "azurerm_subnet" "snt_we" {
   address_prefixes     = ["10.0.1.0/24"]
 }
 
-#resource "azurerm_network_interface" "example" {
-#  name                = "example-nic"
-#  location            = azurerm_resource_group.example.location
-#  resource_group_name = azurerm_resource_group.example.name
+#resource "azurerm_network_interface" "nic_we" {
+#  name                = "nicweu84b1"
+#  location            = azurerm_resource_group.rg_we.location
+#  resource_group_name = azurerm_resource_group.rg_we.name
 
 #  ip_configuration {
 #    name                          = "example-config"
