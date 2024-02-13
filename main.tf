@@ -36,6 +36,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
   size                = "Standard_B2s_v2"
   admin_username      = "quijote"
   admin_password      = "${var.admin_password}"
+  disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.nic_we.id,
   ]
