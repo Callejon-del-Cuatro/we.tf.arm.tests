@@ -21,6 +21,7 @@ resource "azurerm_network_interface" "nic_we" {
   name                = "nicweu84b1"
   location            = azurerm_resource_group.rg_we.location
   resource_group_name = azurerm_resource_group.rg_we.name
+}
 
 #  ip_configuration {
 #    name                          = "example-config"
