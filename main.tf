@@ -33,7 +33,7 @@ resource "azurerm_linux_virtual_machine" "vm_we" {
   name                = "vmweu84b1-00"
   resource_group_name = azurerm_resource_group.rg_we.name
   location            = azurerm_resource_group.rg_we.location
-  size                = "Standard_B2s_v2"
+  size                = "Standard_B2ms"
   admin_username      = "quijote"
   admin_password      = "${var.admin_password}"
   disable_password_authentication = false
