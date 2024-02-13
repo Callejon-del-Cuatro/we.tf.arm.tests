@@ -1,14 +1,14 @@
-resource "azurerm_resource_group" "we_rg" {
-  name     = "rgweeutest84b1"
+resource "azurerm_resource_group" "rg_we" {
+  name     = "rgweu84b1"
   location = "West Europe"
 }
 
-#resource "azurerm_virtual_network" "example" {
-#  name                = "example-network"
-#  address_space       = ["10.0.0.0/16"]
-#  location            = azurerm_resource_group.example.location
-#  resource_group_name = azurerm_resource_group.example.name
-#}
+resource "azurerm_virtual_network" "ntw_we" {
+  name                = "netweu84b1"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.rg_we.location
+  resource_group_name = azurerm_resource_group.rg_we.name
+}
 
 #resource "azurerm_subnet" "example" {
 #  name                 = "example-subnet"
